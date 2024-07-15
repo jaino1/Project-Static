@@ -1,0 +1,11 @@
+.vdo-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.vdo-container iframe{
+    width: calc(100vw / 2);
+    height: calc(100vw / 32 * 9);
+}

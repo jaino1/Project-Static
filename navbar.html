@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/button.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="container">
+        <div class="logo">
+          <img src="/assests/construction.png" alt="logo" />
+        </div>
+        <div class="menu" id="sticknav">
+          <div class="allhead">
+            <a href="/home.html"> <div class="header">หน้าหลัก</div></a>
+            <a href="/exercise.html"> <div class="header">โจทย์</div></a>
+            <div class="header dropdown">
+              <div>คลิปเพิ่มเติม</div>
+              <div class="dropdown-content" style="margin-left: 15%">
+                <div
+                  style="height: 0.9rem; background-color: transparent"
+                ></div>
+                <div class="question">
+                  <a href="/vdo.html">บทที่ 1</a>
+                  <a href="/vdo2.html">บทที่ 2</a>
+                  <a href="/vdo3.html">บทที่ 3</a>
+                  <a href="/vdo4.html">บทที่ 4</a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/about.html"> <div class="header">เกี่ยวกับ</div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gap"></div>
+
+    <div class="float-container">
+      <button class="Chapter">
+        <img src="/assests/3.PNG" alt="btn" />
+      </button>
+      <div class="ContentBox">
+        <div class="title">
+          <p>CONTENT</p>
+        </div>
+        <div class="line"></div>
+        <div class="Topic">
+          <a class="page1 sub-content">
+            <div class="Order">
+              <p>1</p>
+            </div>
+            <div
+              class="content"
+              onclick="window.location.href = '/content1.html'"
+            >
+              <p>เงื่อนไขของความสมดุลของอนุภาค (Condition for the Equalibrium of a Particle)</p>
+            </div>
+          </a>
+
+          <a class="page2 sub-content">
+            <div class="Order">
+              <p>2</p>
+            </div>
+            <div
+              class="content"
+              onclick="window.location.href = '/content2.html'"
+            >
+              <p>แผนภาพ Free-Body Diagram</p>
+            </div>
+          </a>
+
+          <a class="page3 sub-content">
+            <div class="Order">
+              <p>3</p>
+            </div>
+            <div
+              class="content"
+              onclick="window.location.href = '/content3.html'"
+            >
+              <p>ระบบของแรงที่อยู่ในระนาบเดียวกัน (Coplanar Force Systems)</p>
+            </div>
+          </a>
+
+          <a class="page4 sub-content">
+            <div class="Order">
+              <p>4</p>
+            </div>
+            <div
+              class="content"
+              onclick="window.location.href = '/content4.html'"
+            >
+              <p>Three-Dimension Force Systems</p>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("sticknav");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+      const chapterButton = document.querySelector(".Chapter");
+
+      const contentBox = document.querySelector(".ContentBox");
+
+      chapterButton.addEventListener("click", function (event) {
+        contentBox.classList.toggle("show");
+        event.stopPropagation();
+      });
+
+      contentBox.addEventListener("click", function (event) {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      document.addEventListener("click", function (event) {
+        if (
+          !contentBox.contains(event.target) &&
+          event.target !== chapterButton
+        ) {
+          contentBox.classList.remove("show");
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+.threebox{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    min-width: 100%;
+    background: rgb(107,22,135);
+background: linear-gradient(90deg, #6b1687 0%, rgba(107,22,135,1) 25%, rgba(179,25,187,1) 40%, rgba(179,25,187,1) 60%, rgba(123,30,153,1) 75%, rgba(123,30,153,1) 100%);
+    
+}
+.eachbox{
+    color: aliceblue;
+    min-width: calc(100%/3);
+    min-height: calc(100vh - 157px);
+}
+/* .eachbox.one{
+    background: linear-gradient(0deg, rgba(107, 22, 135, 1) 18%, rgba(144, 40, 178, 1) 62%, rgba(179, 25, 187, 1) 99%);
+}
+.eachbox.two{
+    background: linear-gradient(180deg, rgba(107, 22, 135, 1) 18%, rgba(144, 40, 178, 1) 62%, rgba(179, 25, 187, 1) 99%);
+}
+.eachbox.three{
+    background: linear-gradient(0deg, rgba(107, 22, 135, 1) 18%, rgba(144, 40, 178, 1) 62%, rgba(179, 25, 187, 1) 99%);
+} */
+.eachbox .text{
+    padding: 4vw;
+    font-size: 23px
+}

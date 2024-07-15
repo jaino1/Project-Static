@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equalibrium of Particle</title>
+  <link rel="icon" type="image/png" href="/assests/construction.png" />
+  <link rel="stylesheet" href="/css/content.css">
+</head>
+
+<body>
+  <div id="allNav"></div>
+
+  <div class="content-container">
+    <div class="ex"><b>เงื่อนไขของความสมดุลของอนุภาค (Condition for the Equalibrium of a Particle)</b></div>
+    <div class="object">
+      <p>อนุภาค (particle) จะอยู่ในสภาวะของความสมดุล (equilibrium) ได้ก็ต่อเมื่ออนุภาคดังกล่าวยังคงอยู่กับที่</p>
+        ถ้าเมื่อตอนเริ่มต้นอนุภาคอยู่กับที่หรือเมื่ออนุภาคดังกล่าวเคลื่อนที่ด้วยความเร็วคงที่ ถ้าเมื่อตอนเริ่มต้นอนุภาคดังกล่าวเคลื่อนที่ด้วยความเร็วคงที่
+        ในวิชานี้เราจะศึกษาเกี่ยวกับความสมดุลในกรณีที่อนุภาคอยู่กับที่ (static equilibrium)</p>
+        เพื่อที่จะรักษาความสมดุลในกรณีนี้ แรงลัพธ์ที่กระทําต่อนุภาคจะต้องมีค่าเท่ากับศูนย์ (Newton's first law of motion)
+        <p>ซึ่งจะเขียนให้อยู่ในรูปของสมการได้ว่า </p>
+      <img id="img11" src="/assests/f=0.jpg">
+      <p>เมื่อ ∑F เป็นผลรวมของแรงทั้งหมดที่กระทำต่ออนุภาค สมการที่ 3-1 นี้ ไม่ได้เป็นแต่เพียงเงื่อนไขที่จำเป็นเท่านั้น
+        แต่สมการนี้ยังเป็นเงื่อนไขที่เพียงพอที่จะก่อให้เกิดความสมดุลของอนุภาค จากสมการ Newton's second law of motion ∑F = ma และจากสมการเราจะได้ว่า ma = 0 ดังนั้น ความเร่งของอนุภาค a = 0
+      </p>
+      <p>ซึ่งหมายความว่าเมื่อ ∑F = 0 แล้ว อนุภาคจะมีการเคลื่อนที่ด้วย ความเร็วที่คงที่หรืออนุภาคยังคงอยู่กับที่</p>
+    </div>
+  </div>
+
+  <script>
+    // Function to load HTML file
+    function loadHTML(url, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          callback(xhr.responseText);
+        }
+      };
+      xhr.send();
+    }
+
+    // Function to insert HTML content and run script
+    function insertHTML(html) {
+      document.getElementById("allNav").innerHTML = html;
+
+      // Execute any scripts within the inserted content
+      var scripts = document
+        .getElementById("allNav")
+        .getElementsByTagName("script");
+      for (var i = 0; i < scripts.length; i++) {
+        eval(scripts[i].textContent); // Be cautious with eval (see security notes)
+      }
+    }
+
+    // Load HTML file and insert into allNav (assuming header.html is in the same directory)
+    loadHTML("/navbar.html", insertHTML);
+  </script>
+  <script src="/js/button.js"></script>
+  <script src="/js/navbar.js"></script>
+
+</body>
+
+</html>

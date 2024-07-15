@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equalibrium of Particle</title>
+  <link rel="icon" type="image/png" href="/assests/construction.png" />
+  <link rel="stylesheet" href="/css/exercise.css">
+</head>
+
+<body>
+  <div id="allNav"></div>
+  <div class="exercise-container">
+    <div class="question">
+      <div class="quiz1 allquiz">
+        <img src="/assests/1-1_j.jpg" alt="">
+      </div>
+      <div class="imageq1 img-container">
+        <img class="imga" src="/assests/1-1_a.jpg" alt="">
+        <img class="imgb" src="/assests/1-1_b.jpg" alt="">
+        <img class="imgc" src="/assests/1-1_c.jpg" alt="">
+      </div>
+      <div class="ansBtn"><button class="button-73" role="button" onclick="toggleContent('answer1')">Answer</button></div>
+      <div id="answer1" class="toggle-answer">
+        <img src="/assests/1-1_ans.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="question">
+      <div class="quiz2 allquiz">
+        <img src="/assests/2-1_j.jpg" alt="">
+      </div>
+      <div class="imageq2 img-container">
+        <img class="imga" src="/assests/2-1_a.jpg" alt="">
+        <img class="imgb" src="/assests/2-1_b.jpg" alt="">
+      </div>
+      <div class="ansBtn"><button class="button-73" role="button" onclick="toggleContent('answer2')">Answer</button></div>
+      <div id="answer2" class="toggle-answer">
+        <img src="/assests/2-1_ans.jpg" alt="">
+      </div>
+    </div>
+
+    <div class="exercise-container">
+      <div class="question">
+        <div class="quiz3 allquiz">
+          <img src="/assests/3-1_j.jpg" alt="">
+        </div>
+        <div class="imageq3 img-container">
+          <img class="imga" src="/assests/3-1_a.jpg" alt="">
+          <img class="imgb" src="/assests/3-1_b.jpg" alt="">
+        </div>
+        <div class="ansBtn"><button class="button-73" role="button" onclick="toggleContent('answer3')">Answer</button></div>
+        <div id="answer3" class="toggle-answer">
+          <img src="/assests/3-1_ans.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="quiz4 allquiz">
+          <img src="/assests/4-1_j.jpg" alt="">
+        </div>
+        <div class="imageq4 img-container">
+          <img class="imga" src="/assests/4-1_a.jpg" alt="">
+          <img class="imgb" src="/assests/4-1_b.jpg" alt="">
+        </div>
+        <div class="ansBtn"><button class="button-73" role="button" onclick="toggleContent('answer4')">Answer</button></div>
+        <div id="answer4" class="toggle-answer">
+          <img src="/assests/4-1_ans.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="quiz5 allquiz">
+          <img src="/assests/5-1_j.jpg" alt="">
+        </div>
+        <div class="imageq5 img-container">
+          <img class="imga" src="/assests/5-1_ab.jpg" alt="">
+        </div>
+        <div class="ansBtn"><button class="button-73" role="button" onclick="toggleContent('answer5')">Answer</button></div>
+        <div id="answer5" class="toggle-answer">
+          <img src="/assests/5-1_ans.jpg" alt="">
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="quiz7 allquiz">
+          <img src="/assests/7-1_j.jpg" alt="">
+        </div>
+        <div class="imageq7 img-container">
+          <img class="imga" src="/assests/7-1_a.jpg" alt="">
+          <img class="imgb" src="/assests/7-1_b.jpg" alt="">
+        </div>
+        <div class="ansBtn"><button class="button-73" role="button" onclick="toggleContent('answer7')">Answer</button></div>
+        <div id="answer7" class="toggle-answer">
+          <img src="/assests/7-1_ans.jpg" alt="">
+        </div>
+      </div>
+  </div>
+  <script>
+    // Function to load HTML file
+    function loadHTML(url, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          callback(xhr.responseText);
+        }
+      };
+      xhr.send();
+    }
+
+    // Function to insert HTML content and run script
+    function insertHTML(html) {
+      document.getElementById("allNav").innerHTML = html;
+
+      // Execute any scripts within the inserted content
+      var scripts = document
+        .getElementById("allNav")
+        .getElementsByTagName("script");
+      for (var i = 0; i < scripts.length; i++) {
+        eval(scripts[i].textContent); // Be cautious with eval (see security notes)
+      }
+    }
+
+    // Load HTML file and insert into allNav (assuming header.html is in the same directory)
+    loadHTML("/navbar.html", insertHTML);
+  </script>
+  <script src="/js/button.js"></script>
+  <script src="/js/navbar.js"></script>
+  <script src="/js/exercise.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equalibrium of Particle</title>
+  <link rel="icon" type="image/png" href="/assests/construction.png" />
+  <link rel="stylesheet" href="/css/content.css">
+</head>
+
+<body>
+  <div id="allNav"></div>
+  <div class="content-container">
+    <div class="ex"><b>ระบบของแรงที่อยู่ในระนาบเดียวกัน (Coplanar Force Systems)</b>
+    </div>
+    <div class="object">
+      <p>ถ้าอนุภาคถูกกระทำโดยระบบของแรงที่อยู่ในระนาบเดียวกัน (system of coplanar forces) ดังเช่นที่แสดงในรูปที่ 3-3</p>
+      <p>แล้วแรงแต่ละแรงจะสามารถถูกแตกออกเป็นองค์ประกอบของแรงในรูปแบบของ Cartesian force vector i และ j ได้ </p>
+      <img id="img31" src="/assests/3-3.png">
+      <p>จากสมการที่ 3-1 เราจะได้ว่า</p>
+      <img id="img32" src="/assests/2d vec.jpg">
+      <p>ในการที่สมการที่ 3-2 จะมีความสมบูรณ์ได้นั้น ผลรวมขององค์ประกอบของแรงในแนวแกน x</p>
+      <p>และผลรวมของ องค์ประกอบของแรงในแนวแกน y ของสมการกังกล่าวจะต้องมีค่าเท่ากับศูนย์หรือ </p>
+      <img id="img33" src="/assests/scalar 2d.jpg">
+      <p>ซึ่งเราสามารถที่จะใช้สมการเงื่อนไขของความสมดุลทั้งสองนี้ในการหาค่าของตัวแปรที่ไม่ทราบค่าได้สองตัวแปร</p>
+      <p>ซึ่งโดยปกติ จะเป็นค่าของแรงและมุมที่แรงกระทำบนอนุภาค</p>
+      <p><b>สมการเงื่อนไขของความสมดุลในรูปของ scalar</b></p>
+      <img id="img34" src="/assests/3-4.png">
+      <p>ในการใช้สมการที่ 3-3 เราจะแตก vector ของแรงออกเป็นองค์ประกอบของแรงในแนวแกน x และในแนวแกน y</p>
+      <p>ซึ่งจะทำให้เราใช้ scalar แทนองค์ประกอบของแรงในสมการนี้ได้ โดยที่นัย (sense)
+        ของทิศทางขององค์ประกอบของแรงจะเป็นบวก เมื่อองค์ประกอบของแรงมีทิศพุ่งไปทางแกนบวก และจะมีค่าลบเมื่อองค์ประกอบของแรงมีทิศพุ่งไปทางแกนลบ</p>
+      <p>ถ้าเราไม่ทราบค่าของแรงนั้น เราจะสมมุติให้แรงนั้นมีองค์ประกอบของแรงที่มี sense ของทิศทางของแรงพุ่งไปทางแกนบวก
+        ซึ่งถ้าเราได้คำตอบออกมาเป็นค่าลบแล้ว sense ของทิศทางของแรงดังกล่าวงก็จะพุ่งไปทางแกนลบ ยกตัวอย่างเช่น</p>
+      <p>ในการหาแรงที่เกิดขึ้นใน cable AB และ AD เนื่องจากน้ำหนักของเครื่องยนต์ ซึ่งกำหนดให้มีค่าเท่ากับ 2.452 kN </p>
+      <p>ดังที่แสดงในรูปที่ 3-4(a) นั้น เริ่มต้นเราจะทำการการเขียนแผนภาพ free-body diagram ของจุด A
+        ซึ่งจะมีลักษณะดังที่แสดงในรูปที่ 3-4(a) </p>
+      <p>จากนั้น ใช้สมการความสมดุลของแรงในแนวแกน x และแกน y ในการหาแรงที่เกิดขึ้น ใน cable AB และ AD ซึ่งเราจะได้ว่า</p>
+      <p>+ ->ΣFx = 0 + TB cos30 - TD = 0</p>
+      <p>+ ↑ ΣFy = 0 + TB sin30 - 2.452 = 0</p>
+      <p>เมื่อทำการแก้สมการทั้งสอง เราจะได้ว่า</p>
+      <p>TB = 4.90kN และ TD = 4.25kN</p>
+      <p>เนื่องจากค่าของแรงที่ได้มีค่าเป็นบวก ดังนั้น แรงที่เกิดขึ้นใน cable จะมีทิศทางที่เราได้สมมุติไว้</p>
+      <p><b>ขั้นตอนในการวิเคราะห์</b></p>
+      <p>Free-Body Diagram</p>
+      <p>1. เขียนแกนอ้างอิง x และ y ให้อยู่ในทิศทางที่เหมาะสม</p>
+      <p>2. เขียนขนาดและทิศทางของแรงทั้งที่ทราบค่าและไม่ทราบค่าลงในแผนภาพ</p>
+      <p>3. สมมุตินัย (sense) ของแรงที่ไม่ทราบค่าให้มีทิศทางของแรงพุ่งไปทางแกนบวก</p>
+      <p>Equations of Equalibrium</p>
+      <p>4. ใช้สมการความสมดุล ∑Fx = 0 และ ∑Fy = 0 หาค่าของแรงที่ไม่ทราบค่า</p>
+      <p>5. องค์ประกอบของแรงจะมีค่าบวก เมื่อมีทิศทางพุ่งไปในแนวแกนบวก และจะมีค่าลบเมื่อมีทิศทางพุ่งไปในแนวแกนลบ</p>
+      <p>ถ้าคำตอบที่ได้มีค่าเป็นลบ sense ของทิศทางของแรงจะมีทิศพุ่งตรงกันข้ามกับที่ได้สมมุติไว้</p>
+    </div>
+  </div>
+  <script>
+    // Function to load HTML file
+    function loadHTML(url, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          callback(xhr.responseText);
+        }
+      };
+      xhr.send();
+    }
+
+    // Function to insert HTML content and run script
+    function insertHTML(html) {
+      document.getElementById("allNav").innerHTML = html;
+
+      // Execute any scripts within the inserted content
+      var scripts = document
+        .getElementById("allNav")
+        .getElementsByTagName("script");
+      for (var i = 0; i < scripts.length; i++) {
+        eval(scripts[i].textContent); // Be cautious with eval (see security notes)
+      }
+    }
+
+    // Load HTML file and insert into allNav (assuming header.html is in the same directory)
+    loadHTML("/navbar.html", insertHTML);
+  </script>
+  <script src="/js/button.js"></script>
+  <script src="/js/navbar.js"></script>
+
+</body>
+
+</html>

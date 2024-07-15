@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Equalibrium of Particle</title>
+  <link rel="icon" type="image/png" href="/assests/construction.png" />
+  <link rel="stylesheet" href="/css/content.css" />
+</head>
+
+<body>
+  <div id="allNav"></div>
+  <div class="content-container">
+    <div class="ex">
+      <b>Three-Dimension Force Systems</b>
+
+    </div>
+    <div class="object">
+      <p>อนุภาคจะอยู่ในความสมดุลเมื่อ</p>
+      <img id="img41" src="/assests/f=0.jpg">
+      <p>
+        ถ้า vector
+        ของแรงที่กระทำต่ออนุภาคถูกแตกออกเป็นองค์ประกอบของแรงในรูปแบบของ
+        Cartesian vector
+      </p>
+      <p>ดังที่แสดงในรูปที่ 3-5 แล้ว เราจะได้ว่า</p>
+      <img id="img42" src="/assests/vec 3d.jpg">
+      <p>และ</p>
+      <img id="img43" src="/assests/scalar 3d.jpg">
+      <p>
+        สมการที่ 3-5 นี้แสดงผลรวมทางพีชคณิตของแรงที่กระทำอยู่บนอนุภาคในแนวแกน x,
+        แกน y, และแกน z
+      </p>
+      <p>
+        ซึ่งเราจะใช้ในการหาค่าของตัวแปรที่ไม่ทราบค่าได้สามตัวแปร
+        ซึ่งโดยปกติจะเป็นค่าของแรงและ/หรือมุมที่แรงกระทำบนอนุภาค
+      </p>
+      <img id="img44" src="/assests/3-5.png" />
+      <p><b>ขั้นตอนในการวิเคราะห์</b></p>
+      <p>Free-Body Diagram</p>
+      <p>1. เขียนแกนอ้างอิง x, y. และ z ให้อยู่ในทิศทางที่เหมาะสม</p>
+      <p>2. เขียนขนาดและทิศทางของแรงทั้งที่ทราบค่าและไม่ทราบค่าลงในแผนภาพ</p>
+      <p>
+        3. สมมุตินัย (sense) ของแรงที่ไม่ทราบค่าให้มีทิศทางของแรงพุ่งไปทางแกนบวก
+      </p>
+      <p>
+        4. ในกรณีที่เราสามารถแตกแรงออกเป็นองค์ประกอบของแรงในแนวแกน x, แกน y,
+        และแกน z ได้ง่ายนั้น
+      </p>
+      <p>
+        เราจะใช้สมการความสมดุลในรูปแบบของ scalar หรือ ∑Fx = 0, ΣFy = 0, และ ∑Fz
+        = 0 ใน การหาค่าของตัวแปรที่ไม่ทราบค่าสามตัวแปร
+      </p>
+      <p>
+        5. ในกรณีที่การแตกแรงออกเป็นองค์ประกอบของแรงในแนวแกน x, แกน y. และแกน z
+        กระทำได้ยาก
+      </p>
+      <p>
+        เราจะเขียนแรงแต่ละแรงให้อยู่ในรูป Cartesian vector แล้วแทนค่า vector
+        ของแรงแต่ละแรงลงในสมการที่ 3-4
+      </p>
+      <p>
+        จากนั้นให้องค์ประกอบของ Cartesian unit vector i, j และ k
+        มีค่าเป็นศูนย์แล้วแก้สมการหาค่าของตัวแปรที่ไม่ทราบค่าสามตัวแปร
+      </p>
+      <p>
+        6. ถ้าคำตอบที่ได้มีค่าเป็นลบ sense
+        ของทิศทางของแรงจะมีทิศพุ่งตรงกันข้ามกับที่ได้สมมุติไว้
+      </p>
+    </div>
+  </div>
+
+  <script>
+    // Function to load HTML file
+    function loadHTML(url, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          callback(xhr.responseText);
+        }
+      };
+      xhr.send();
+    }
+
+    // Function to insert HTML content and run script
+    function insertHTML(html) {
+      document.getElementById("allNav").innerHTML = html;
+
+      // Execute any scripts within the inserted content
+      var scripts = document
+        .getElementById("allNav")
+        .getElementsByTagName("script");
+      for (var i = 0; i < scripts.length; i++) {
+        eval(scripts[i].textContent); // Be cautious with eval (see security notes)
+      }
+    }
+
+    // Load HTML file and insert into allNav (assuming header.html is in the same directory)
+    loadHTML("/navbar.html", insertHTML);
+  </script>
+  <script src="/js/button.js"></script>
+  <script src="/js/navbar.js"></script>
+
+</body>
+
+</html>

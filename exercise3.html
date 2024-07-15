@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equalibrium of Particle</title>
+    <link rel="icon" type="image/png" href="/assests/logo.jpg" />
+    <link rel="stylesheet" href="/css/home.css">
+  </head>
+
+<body>
+    <div id="allNav"></div>
+    <script>
+      // Function to load HTML file
+      function loadHTML(url, callback) {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            callback(xhr.responseText);
+          }
+        };
+        xhr.send();
+      }
+
+      // Function to insert HTML content and run script
+      function insertHTML(html) {
+        document.getElementById("allNav").innerHTML = html;
+
+        // Execute any scripts within the inserted content
+        var scripts = document
+          .getElementById("allNav")
+          .getElementsByTagName("script");
+        for (var i = 0; i < scripts.length; i++) {
+          eval(scripts[i].textContent); // Be cautious with eval (see security notes)
+        }
+      }
+
+      // Load HTML file and insert into allNav (assuming header.html is in the same directory)
+      loadHTML("/navbar.html", insertHTML);
+    </script>
+    <script src="/js/button.js"></script>
+    <script src="/js/navbar.js"></script>
+    <div class="ex">ข้อที่ 3 </div>
+    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit reiciendis rem ducimus. Nam similique doloribus beatae fugit, sequi quos autem aperiam fugiat nisi excepturi quasi expedita iste laudantium nulla in.</div>
+</body>
+</html>

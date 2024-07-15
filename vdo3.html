@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equalibrium of Particle</title>
+  <link rel="icon" type="image/png" href="/assests/construction.png" />
+  <link rel="stylesheet" href="/css/vdo.css">
+</head>
+
+<body>
+  <div id="allNav"></div>
+  <div class="vdo-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/iXvatLpu-Rg?si=524MJOUbkx5yDoI5&autoplay=1"
+      title="YouTube video player" frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <script>
+    // Function to load HTML file
+    function loadHTML(url, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          callback(xhr.responseText);
+        }
+      };
+      xhr.send();
+    }
+
+    // Function to insert HTML content and run script
+    function insertHTML(html) {
+      document.getElementById("allNav").innerHTML = html;
+
+      // Execute any scripts within the inserted content
+      var scripts = document
+        .getElementById("allNav")
+        .getElementsByTagName("script");
+      for (var i = 0; i < scripts.length; i++) {
+        eval(scripts[i].textContent); // Be cautious with eval (see security notes)
+      }
+    }
+
+    // Load HTML file and insert into allNav (assuming header.html is in the same directory)
+    loadHTML("/navbar.html", insertHTML);
+  </script>
+  <script src="/js/button.js"></script>
+  <script src="/js/navbar.js"></script>
+
+</body>
+
+</html>

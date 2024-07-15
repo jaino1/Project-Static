@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equalibrium of Particle</title>
+  <link rel="icon" type="image/png" href="/assests/construction.png" />
+  <link rel="stylesheet" href="/css/content.css">
+</head>
+
+<body>
+  <div id="allNav"></div>
+  <div class="content-container">
+    <div class="ex"><b>แผนภาพ Free-Body Diagram</b>
+    </div>
+    <div class="object">
+      <p>Free-body diagram เป็นแผนภาพของอนุภาคที่เป็นอิสระจากสิ่งรอบข้างและถูกกระทำโดยแรงต่างๆ
+      ทั้งที่ทราบค่าและไม่ทราบค่า แรงนี้อาจจะเป็นแรงภายนอกที่กระทำต่ออนุภาคโดยตรง หรืออาจจะเป็นแรง
+      ที่เกิดจากสิ่งรอบข้างกระทำกับอนุภาคก็ได้จากรูปที่ 3-1 ซึ่งแสดงวิธีการหนึ่งที่คนสองคนจะช่วยกันยกน้ำหนักบรรทุกออกจากรถบรรทุก
+      ถ้ากำหนดให้ในสภาวะดังกล่าวระบบทางกลศาสตร์ดังกล่าวอยู่ในสมดุลแล้ว เราสามารถพิจารณาจุดเชื่อมต่อของเชือกที่จุด A 
+      เป็นอนุภาคได้และอนุภาคดังกล่าวจะถูกกระทำโดยน้ำหนักบรรทุก W และแรงตึงในแนวแกนของเส้นเชือก TAB และ TAC</p>
+      <img id="img21" src="/assests/3-1.jpg">
+      <p><b>ขั้นตอนในการเขียน Free-Body Diagram</b></p>
+      <p>1. ใช้จินตนาการในการแยกอนุภาคออกจากสิ่งที่อยู่รอบข้างทั้งหมด แล้วเขียนอนุภาคนั้นอย่างคร่าวๆ ดังเช่น</p>
+      <p>อนุภาคที่จุดเชื่อมต่อที่จุด A ดังที่แสดงในรูปที่ 3-2 </p>
+      <p>2. เขียนแรงกระทำทั้งหมดที่กระทำต่ออนุภาคดังกล่าว ในกรณีของระบบทางกลศาสตร์ ดังที่แสดงในรูปที่ 3-2 </p>
+      <p>แรงกระทำต่ออนุภาคจะประกอบด้วยแรงตึงในแนวแกนของเส้นเชือกทั้งสามเส้น</p>
+      <p>3. เขียนขนาดของแรงที่ทราบค่าด้วยค่าของแรงและทิศทางของแรงที่เหมาะสมซึ่งได้แก่น้ำหนักของวงล้อ W </p>
+      <p>และใช้สัญลักษณ์แทนแรงที่ไม่ทราบค่าซึ่งได้แก่แรงตึงในแนวแกนของเส้นเชือก TAB และ TAC </p>
+      <img id="img22" src="/assests/3-2.png">
+    </div>
+  </div>
+
+  <script>
+    // Function to load HTML file
+    function loadHTML(url, callback) {
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", url, true);
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+          callback(xhr.responseText);
+        }
+      };
+      xhr.send();
+    }
+
+    // Function to insert HTML content and run script
+    function insertHTML(html) {
+      document.getElementById("allNav").innerHTML = html;
+
+      // Execute any scripts within the inserted content
+      var scripts = document
+        .getElementById("allNav")
+        .getElementsByTagName("script");
+      for (var i = 0; i < scripts.length; i++) {
+        eval(scripts[i].textContent); // Be cautious with eval (see security notes)
+      }
+    }
+
+    // Load HTML file and insert into allNav (assuming header.html is in the same directory)
+    loadHTML("/navbar.html", insertHTML);
+  </script>
+  <script src="/js/button.js"></script>
+  <script src="/js/navbar.js"></script>
+</body>
+
+</html>
